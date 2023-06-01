@@ -19,7 +19,7 @@ def get_songs(artist): # Expects an artist, returns e-chords urls of songs of th
 
 # List of the songs we want to scrape
 urls = []
-for i in rock_artists[:1]:
+for i in rock_artists:
   urls.extend(list(set(get_songs(i))))
 
 
@@ -34,7 +34,6 @@ def get_chords(url): # Expects an e-chords url, returns chords of that song as a
 
   # Adding the content of the u tags to a list and returning it
   return [i.text for i in u_tags]
-
 
 # Writing the chords to a csv file
 counter = 0

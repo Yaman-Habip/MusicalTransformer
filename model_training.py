@@ -21,7 +21,7 @@ model = TransformerModel(
 model.compile(optimizer=keras.optimizers.Adam(), loss=keras.losses.CategoricalCrossentropy(from_logits=True), metrics = ["accuracy"])
 
 # Train the model
-model.fit(train, train_labels, batch_size=64, epochs=300, verbose = 1, shuffle = False)
+model.fit(train, train_labels, batch_size=64, epochs=1600, verbose = 1, shuffle = False)
 
 # Test the model
 test_result = model.evaluate(test, test_labels, verbose = 0)
